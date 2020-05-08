@@ -19,11 +19,11 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
         //     mainTopicDiv.appendChild(itemTopic)
         // }))
      for (let i = 0; i < tabData.length; i++){
-        tabData[i] = document.createElement('div')
-        tabData[i].classList.add('tab')
-        tabData[i].textContent = tabData[i]
-        mainTopicDiv.appendChild(tabData[i])
+        topic = document.createElement('div')
+        topic.classList.add('tab')
+        topic.textContent = tabData[i]
+        mainTopicDiv.appendChild(topic)
      }
-       return (tabData)
+       return (topic)
         
     })
