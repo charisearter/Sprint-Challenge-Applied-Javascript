@@ -18,3 +18,28 @@
 // </div>
 //
 // Use your function to create a card for each of the articles and add the card to the DOM.
+function makeCard (cardAttrs){
+    const { headline, authorImg, authorName } = cardAttrs
+
+    //set elements
+    const newCard = document.createElement('div')
+    const headlineDiv = document.createElement('div')
+    const authorDiv = document.createElement('div')
+    const imgDiv = document.createElement('div')
+    const photo = document.createElement('img')
+    const authorSpan = document.createElement('span')
+
+    //structure
+    newCard.appendChild(headlineDiv)
+    newCard.appendChild(authorDiv)
+    authorDiv.appendChild(imgDiv)
+    imgDiv.appendChild(photo)
+    authorDiv.appendChild(authorSpan)
+    //text content
+
+    //class
+    newCard.classList.add('card')
+
+    
+
+}
