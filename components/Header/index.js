@@ -28,6 +28,9 @@ function Header() {
     dateSpan.classList.add('date')
     tempSpan.classList.add('temp')
 
-    console.log(headerBox.appendChild(headerDiv))
+
+    //append to header
+    headerBox.appendChild(headerDiv)
+    return headerDiv
 }
-Header()
+
