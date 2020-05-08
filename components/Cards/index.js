@@ -39,6 +39,10 @@ function makeCard (cardAttrs){
 
     //class
     newCard.classList.add('card')
+    headlineDiv.classList.add('headline')
+    authorDiv.classList.add('author')
+    imgDiv.classList.add('img-container')
+    
 
     
 
