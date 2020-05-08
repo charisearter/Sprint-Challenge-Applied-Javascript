@@ -11,19 +11,17 @@ const mainTopicDiv = document.querySelector('body > div.tabs > div')
 axios
     .get('https://lambda-times-backend.herokuapp.com/topics')
     .then( response => {
-        let topicArray = response.topics
-        topicArray.forEach(topic => {
-            const topicDiv = document.createElement('div')
-            topicDiv.classList.add('tab')
-            topicDiv.textContent(topic)
-            mainTopicDiv.appendChild(topicDiv)
-            console.log(topicArray)
-          })
-          debugger
+        let topicArray = response.topics;
+        topicArray.forEach (item => {
+            item.createElement('div')
+            item.classList.add('tabs')
+            mainTopicDiv.appendChild(topicArray(item));
+        })
     })
     .catch(error => {
-        console.log('Something needs to be fixed')
+        console.log('Need to fix something')
     })
     .finally(() => {
         console.log('done')
     })
+        
