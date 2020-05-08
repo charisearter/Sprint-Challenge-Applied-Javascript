@@ -18,6 +18,7 @@
 // </div>
 //
 // Use your function to create a card for each of the articles and add the card to the DOM.
+const cardBox = document.querySelector('.cards-container')
 function makeCard (/*cardAttrs*/){
    // const { headline, authorImgUrl, authorName } = cardAttrs
 
@@ -46,9 +47,11 @@ function makeCard (/*cardAttrs*/){
     headlineDiv.classList.add('headline')
     authorDiv.classList.add('author')
     imgDiv.classList.add('img-container')
-    console.log(newCard)
-
     
+    //add to DOM
+    cardBox.appendChild(newCard)
+
     return newCard
 
 }
+makeCard()
