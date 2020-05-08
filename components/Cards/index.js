@@ -47,6 +47,6 @@ function makeCard (cardAttrs){
     imgDiv.classList.add('img-container')
 
 
-    
+    return newCard
 
 }

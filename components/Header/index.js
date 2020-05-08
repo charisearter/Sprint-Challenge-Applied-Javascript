@@ -28,9 +28,14 @@ function Header() {
     dateSpan.classList.add('date')
     tempSpan.classList.add('temp')
 
+    //text Content ???
+    dateSpan.textContent = 'SMARCH 28, 2019'
+    h1.textContent = 'Lambda Times'
+    tempSpan.textContent = '98°'
 
     //append to header
     headerBox.appendChild(headerDiv)
     return headerDiv
 }
 
+Header()
