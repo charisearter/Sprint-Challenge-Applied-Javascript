@@ -28,20 +28,31 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead.
 
-1. What is the DOM?
+Q1. What is the DOM?
 
-2. What is an event?
+A1. Document Object Model (DOM). - an object representation of the HTML elements of a webpage. The Application Programming Interface (API) (the bridge) between the content and the browser.
 
-3. What is an event listener?
+Q2. What is an event?
 
-4. Why would we convert a NodeList into an Array?
+A2.  Events are ways users interact with the webpage.
 
-5. What is a component?
+Q3. What is an event listener?
+
+A3. An event listener is the tracking process and the subsequent action taken.
+
+Q4. Why would we convert a NodeList into an Array?
+
+A4.  To use other array methods like .map, .filter, and so on.
+
+Q5. What is a component?
+
+A5. A component is a reusable piece of code that can be used to build elements sharing functionality and styling.
+
 
 ### Git Set up
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
+* [x] Fork the project into your GitHub user account
+* [x] Clone the forked project into a directory on your machine
 * [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
 * [ ] You are now ready to build this project with your preferred IDE
 
