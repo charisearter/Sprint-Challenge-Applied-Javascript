@@ -9,24 +9,15 @@
 //    <div class="tab">topic here</div>
 const mainTopicDiv = document.querySelector('body > div.tabs > div')
 
-function makeTabs () {
-// axios
-//     .get('https://lambda-times-backend.herokuapp.com/topics')
-//     .then( response => {
-//         let topicArray = response.topics;
-//         topicArray.forEach (item => {
-//             item.createElement('div')
-//             item.classList.add('tabs')
-//             mainTopicDiv.appendChild(topicArray(item));
-//         })
-//     })
-//     .catch(error => {
-//         console.log('Need to fix something')
-//     })
-//     .finally(() => {
-//         console.log('done')
-//     })
-
-}
-
+axios.get('https://lambda-times-backend.herokuapp.com/topics')
+    .then(response => {
+        const tabData = response.data.topics
+     for (let i = 0; i < tabData.length; i++){
+        tabData[i] = document.createElement('div')
+        tabData[i].classList.add('tab')
         
+        mainTopicDiv.appendChild(tabData[i])
+     }
+       return (tabData)
+        
+    })
