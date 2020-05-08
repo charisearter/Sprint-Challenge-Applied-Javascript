@@ -19,9 +19,7 @@
 //
 // Use your function to create a card for each of the articles and add the card to the DOM.
 const cardBox = document.querySelector('.cards-container')
-function makeCard (/*cardAttrs*/){
-   // const { headline, authorImgUrl, authorName } = cardAttrs
-
+function makeCard (topic){
     //set elements
     const newCard = document.createElement('div')
     const headlineDiv = document.createElement('div')
@@ -36,17 +34,17 @@ function makeCard (/*cardAttrs*/){
     authorDiv.appendChild(imgDiv)
     imgDiv.appendChild(photo)
     authorDiv.appendChild(authorSpan)
+
+     //class
+     newCard.classList.add('card')
+     headlineDiv.classList.add('headline')
+     authorDiv.classList.add('author')
+     imgDiv.classList.add('img-container')
+     
     //text content
-    // headlineDiv.textContent = headline
-    // photo.src = authorImgUrl
-    // authorSpan.textContent = authorName
-
-
-    //class
-    newCard.classList.add('card')
-    headlineDiv.classList.add('headline')
-    authorDiv.classList.add('author')
-    imgDiv.classList.add('img-container')
+    headlineDiv.textContent = topic.headline
+    photo.src = topic.authorPhoto
+    authorSpan.textContent = topic.authorName   
     
     //add to DOM
     cardBox.appendChild(newCard)
@@ -54,4 +52,20 @@ function makeCard (/*cardAttrs*/){
     return newCard
 
 }
-makeCard()
+
+    axios.get('https://lambda-times-backend.herokuapp.com/articles')
+    .then(response => {
+        for (const item in response.data.articles){
+            response.data.articles[item].forEach(topic => {
+                cardBox.appendChild(makeCard(topic))
+            })
+            
+          
+         }
+       
+        //return cardBox.appendChild(makeCard(theArticle))
+        
+        
+    })
+
+
